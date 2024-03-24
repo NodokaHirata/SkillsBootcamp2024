@@ -1,0 +1,106 @@
+main {
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(9, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(5%, 1fr));
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-gap: 5px;
+}
+
+.grid-item {
+  background-color: rgb(235, 222, 106);
+  text-align: center;
+  border: 1px solid black;
+  padding: 2vh;
+  font-size: 2vh;
+}
+
+h1 {
+  text-align: center;
+  color: grey;
+}
+
+.lightblue {
+  background-color: rgb(108, 178, 206);
+}
+
+.purple {
+  background-color: rgb(166, 83, 178);
+}
+
+.red {
+  background-color: rgb(215, 43, 43);
+}
+
+.orange {
+  background-color: orange;
+}
+
+.green {
+  background-color: green;
+}
+
+.midiumblue {
+  background-color: rgb(46, 166, 126);
+}
+
+.blue {
+  background-color: blue;
+}
+
+.pink {
+  background-color: rgb(228, 16, 125);
+}
+
+.masterd {
+  background-color: rgb(129, 139, 36);
+}
+
+.Emp {
+  background-color: white;
+  border: none;
+  padding: 2vh;
+}
+
+/*  Screen size less than 1314px */
+@media (max-width: 1314px) {
+  .grid-container {
+    display: none; /* grid off */
+  }
+
+  main {
+    min-height: 80vh;
+    background-image: url("PeriodicTableOfElements.jpeg"); /* the image */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+  }
+  .grid-item {
+    padding: 1vh;
+    font-size: 1.5vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  }
+
+  .grid-item {
+    padding: 0.5vh;
+    font-size: 1vh;
+  }
+}
