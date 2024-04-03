@@ -1,5 +1,4 @@
 // Method No.1: using a for loop
-
 const inputedNum = prompt("Entre a number of at least 3 digits.");
 // Convert into an array
 const numArray = inputedNum.split("").map(Number);
