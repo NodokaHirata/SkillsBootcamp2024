@@ -1,3 +1,4 @@
+// Colour array
 const arr = [
   "jetblack",
   "green",
@@ -5,13 +6,14 @@ const arr = [
   "red",
   "emerald",
   "blue",
-  "goldenyellow",
+  "orange",
   "skyblue",
-  "stategreen",
+  "indigo",
   "caramelbrown",
 ];
 
-let myFillterFunction = (arr) => (fn) => {
+// Return a new array after executing a callback function to each value of the arr
+let myFilterFunction = (arr) => (fn) => {
   const newArr = [];
   for (let i = 0; i < arr.length; i++) {
     if (fn(arr[i])) {
@@ -20,5 +22,8 @@ let myFillterFunction = (arr) => (fn) => {
   }
   return newArr;
 };
-const executeFillerFunc = myFillterFunction(arr)((value) => value.length >= 6);
+
+// A callback function returns true when a length of a value in the array equals to 6
+const executeFillerFunc = myFilterFunction(arr)((value) => value.length === 6);
+
 console.log("result", executeFillerFunc);

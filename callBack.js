@@ -1,28 +1,25 @@
-// Code here for the callbacks task
-
 // Setting variables to hold the intervalID
-// and also a counter
 let intervalID;
+// counter
 let counter = 1;
 
-let startCounter = function() {
-    intervalID = setInterval(
-        function () {console.log(counter ++)}, 1000
-    );
-}
+// intervalID will be stored when this is executed
+let startCounter = function () {
+  intervalID = setInterval(function () {
+    console.log(counter++);
+  }, 1000);
+};
 
+// Use intervalID to clear intervals
 function stopCounter() {
-    clearInterval(intervalID);
+  clearInterval(intervalID);
 }
 
-let startButton = document.getElementById('start');
-let stopButton = document.getElementById('stop');
+let startButton = document.getElementById("start");
+let stopButton = document.getElementById("stop");
 
-// The event listener below is missing a callback function argument;
-// this button should start the outputting of the counter to the console
+// Execute the startCounter function when the start button is clicked
 startButton.addEventListener("click", startCounter);
 
-// The event listener below is missing a callback function argument;
-// this button should the counter from outputting to the console
+// Execute the stopCounter function when the stop button is clicked
 stopButton.addEventListener("click", stopCounter);
-
