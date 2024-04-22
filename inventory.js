@@ -97,8 +97,8 @@ const sortByValue = (shoesArr) => {
   return shoesArr;
 };
 
-// console.table(findShoesByname("Nike"));
-// console.table(findLowestValuedShoes(shoesArr));
+console.table(findShoesByname("Nike"));
+console.table(findLowestValuedShoes(shoesArr));
 console.table(findHighestvaluedShoes(shoesArr));
-// console.table(editShoes(shoesArr, newShoesArr));
-// console.table(sortByValue(shoesArr));
+console.table(editShoes(shoesArr, newShoesArr));
+console.table(sortByValue(shoesArr));
