@@ -18,7 +18,7 @@ let shoesArr = [nikeShoes, adidasShoes, vansShoes, converseShoes, reebokShoes];
 
 // Search for any shoe within the shoesArr
 const findShoesByname = (shoeName) => {
-  return shoesArr.find((shoe) => shoeName === shoeName);
+  return shoesArr.find((shoe) => shoe.name === shoeName);
 };
 
 // Find the shoe with the lowest value per item
